@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta charset="utf-8" />
-      <title>个人简历</title>
+      <title>简历</title>
       <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
 .markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
 .markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
@@ -26,7 +26,7 @@
 .markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
 .markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
 .markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
-.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; overflow-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
 .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
 .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
 .markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
@@ -91,17 +91,18 @@
 .markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
 .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
 .markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
-.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
-.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre { overflow-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; overflow-wrap: normal; background-color: transparent; border: 0px; }
 .markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
 .markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
 .markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
 .markdown-preview[data-use-github-style] code { color: inherit; }
 .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
-.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
-.markdown-preview ul label { vertical-align: top; }
+.markdown-preview .task-list-item input[type="checkbox"] { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview .task-list-item { list-style-type: none; }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
@@ -202,7 +203,7 @@ pre.editor-colors .fold-marker:after {
   color: #e5c07b;
 }
 .syntax--entity.syntax--other.syntax--inherited-class {
-  color: #98c379;
+  color: #e5c07b;
 }
 .syntax--keyword {
   color: #c678dd;
@@ -211,7 +212,7 @@ pre.editor-colors .fold-marker:after {
   color: #c678dd;
 }
 .syntax--keyword.syntax--operator {
-  color: #abb2bf;
+  color: #c678dd;
 }
 .syntax--keyword.syntax--other.syntax--special-method {
   color: #61afef;
@@ -508,6 +509,12 @@ pre.editor-colors .fold-marker:after {
 .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
   color: #c678dd;
 }
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
 .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
   color: #e06c75;
 }
@@ -575,23 +582,22 @@ pre.editor-colors .fold-marker:after {
 }
 </style>
   </head>
-  <body class='markdown-preview' data-use-github-style><h1 id="-">联系方式</h1>
+  <body class='markdown-preview' data-use-github-style><h1 id="联系方式">联系方式</h1>
 <ul>
 <li>手机：15798031231</li>
-<li>Email：<a href="mailto:2330629752@qq.com">2330629752@qq.com</a></li>
-<li>微信：15798031231</li>
+<li>Email: <a href="mailto:2330629752@qq.com">2330629752@qq.com</a></li>
+<li>微信号：15798031231</li>
 </ul>
 <hr>
-<h1 id="-">个人基本信息</h1>
+<h1 id="个人信息">个人信息</h1>
 <ul>
-<li>姓名：罗成</li>
-<li>性别：男</li>
-<li>学历：大专</li>
-<li>专业：软件工程</li>
+<li>罗成/男/1992</li>
+<li>专科/软件工程</li>
+<li>工作年限：3年</li>
 </ul>
 <hr>
-<h1 id="-">个人技能</h1>
-<ol>
+<h1 id="个人技能">个人技能</h1>
+<ul>
 <li>熟悉Java基础，熟练使用接口、类、对象、异常、集合、反射、泛型等技术</li>
 <li>熟知Java常用设计模式以及WEB应用研发过程，有良好的代码编写规范</li>
 <li>熟悉Spring、SpringMVC、MyBatis、Spring Boot等开源框架技术，能够使用SSM框架进行项目的开发</li>
@@ -601,100 +607,70 @@ pre.editor-colors .fold-marker:after {
 <li>熟悉Maven项目管理构建工具</li>
 <li>熟悉SVN版本管理工具</li>
 <li>熟悉Linux的一些基本操作</li>
+</ul>
+<hr>
+<h1 id="工作经历">工作经历</h1>
+<h2 id="杭州思锐信息有限公司2019年4月--2020年3月">杭州思锐信息有限公司(2019年4月 ~ 2020年3月)</h2>
+<h3 id="杭州市互联网养老平台">杭州市互联网+养老平台</h3>
+<h4 id="项目描述">项目描述</h4>
+<p>在移动互联网时代依托民政支持，杭州思锐信息技术有限公司协同杭州市民卡规划建设了业务管理平台，养老运营平台，服务商平台，统一结算平台，养老监管平台等多大平台。
+用技术手段引领行业发展 用大数据方便老人生活推进"最多跑一次"改革，实践以人民为中心发展思想的具体行动。</p>
+<h4 id="责任描述">责任描述</h4>
+<ol>
+<li>作为核心程序员，我不但完成了高龄津贴，钱江分的开发工作，更提出了关于预警模块的建设，通过预警模块有效的提升了订单的真实性。
+在该模块上线后，有效协助民政识别疑似异常订单保证了民政每一分钱都确确实实都花在了老人身上让老人享受到了服务。</li>
+<li>负责数据层,处理整个前端APP逻辑开发工作</li>
+<li>对线上慢SQL及相关功能定期review代码</li>
 </ol>
 <hr>
-<h1 id="-">工作经历</h1>
-<h3 id="-2019-2-2019-3-">林业驾校 （ 2019年2月 ~ 2019年3月 ）</h3>
-<ul>
-<li><p>项目简介:</p>
-<p>林业驾校是一款帮助用户练习科目一考试，驾驶证报名，团购保险等功能的APP，由管理员在后台界面发布一些新闻信息，用户通过手机端可以进行浏览或者是自己通过驾友圈模块发一些自己的文章</p>
-</li>
-<li><p>技术点：</p>
-<ul>
-<li>前台(Vue + ElementUI + Android)</li>
-<li>后台（Spring4 + SpringMVC + MyBatis）</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>责任描述：</p>
-<p>负责客服功能模块的开发提供专业的技术人员来帮助用户解决疑问提高用户的满意度。</p>
-</li>
-<li><p>流程
-用户通过在Android原生界面中的客服功能跳转到H5界面来咨询客服，客服在后台通过轮询会获取到未读的消息来进行回复，用户可以通过状态来知道客服是否读取了消息。</p>
-</li>
-</ul>
-<h3 id="-2019-3-2019-4-">形容荟 （ 2019年3月 ~ 2019年4月 ）</h3>
-<ul>
-<li><p>项目简介:</p>
-<p>形容荟是一款帮助学生来找工作的一款APP,学校通过和机构合作方式来帮助学生就业。</p>
-</li>
-<li><p>技术点：</p>
-<ul>
-<li>新项目(自己搭建)</li>
-<li>前台(Vue + ElementUI + Android)</li>
-<li><p>后台（Spring Boot + MyBatis）</p>
-</li>
-<li><p>责任描述：</p>
-<p>1.负责专场招聘功能模块的开发以此来提高匹配度，由于为了不影响原项目功能所以新开一个后台来提供服务。</p>
-<p>2.负责荟友圈功能模块的开发来方便学生交流。</p>
-<p>3.爬取试题来丰富自身题库</p>
-</li>
-<li><p>流程</p>
-<p>管理员通过后台来添加专场把机构和某个班级的学生拉到这个专场中以此来提高匹配度，学生通过APP可以浏览职位，当不属于某个专场的学生不允许投递简历</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="-2017-2-2018-7-">深圳科蓝金信科技发展有限公司 （ 2017年2月 ~ 2018年7月 ）</h2>
-<h3 id="-">互联网金融支付平台项目</h3>
-<ul>
-<li><p>项目简介:</p>
-<p>互联网金融支付平台提供可靠的资金链路通道来保障日间交易</p>
-</li>
-<li><p>技术点:</p>
-<ul>
-<li>后台（PE）</li>
-</ul>
-</li>
-<li><p>责任描述：</p>
-<ol>
-<li>使用数字签名来保证日间交易数据传输安全性</li>
+<h2 id="深圳科蓝金信科技发展有限公司2017年2月--2018年7月">深圳科蓝金信科技发展有限公司(2017年2月 ~ 2018年7月)</h2>
+<h3 id="互联网金融支付平台项目">互联网金融支付平台项目</h3>
+<h4 id="项目描述-1">项目描述</h4>
+<p>互联网金融支付平台提供可靠的资金链路通道来保障日间交易通过收单侧的商户端入手掌握用户的交易数据，为以后通过大数据分析，寻找自身发展过程中存在的问题，通过解决问题、优化产品和服务，提升自身的竞争力。</p>
+<h4 id="责任描述-1">责任描述</h4>
+<ol start="0">
+<li>在开发前我在项目经理的带领下参与了业务调研，数据库设计</li>
+<li>在熟悉支付系统的业务逻辑后根据业务规则来画流程图参与功能开发</li>
+<li>负责数据层,处理前端逻辑使用数字签名来保证日间交易数据传输安全性</li>
+<li>通过dubbo通信来完成日间上下游系统之间交互过程</li>
 <li>通过日间差错处理及异步回调轮询机制来减少调单率并保障系统反馈及时可靠</li>
-<li>通过反复测试跑批来完成日终资金通过对账</li>
+<li>在项目经理的带领下实现日终跑批对账系统设计与实现基于quartz搭建跑批任务</li>
 <li>编写白盒测试用例来反复验证提供给外围接口的可靠合理性</li>
 <li>使用postman编写接口文档</li>
-</ol>
-</li>
-</ul>
-<h3 id="-">互联网金融收单平台项目</h3>
-<ul>
-<li><p>项目简介:</p>
-<p>互联网金融收单平台通过商户端入手掌握用户的交易数据，为以后通过大数据分析，寻找自身发展过程中存在的问题，通过解决问题、优化产品和服务，提升自身的竞争力。</p>
-</li>
-<li><p>技术点:</p>
-<ul>
-<li>后台（PE）</li>
-</ul>
-</li>
-<li><p>责任描述：</p>
-<ol>
-<li>根据业务规则来画流程图</li>
-<li>通过dubbo通信来完成内容日间上下游系统之间交互过程</li>
-<li>通过反复测试跑批来完成日终收单系统对账</li>
-<li>编写白盒测试用例来反复验证提供给外围接口的可靠合理性</li>
-<li>使用postman编写接口文档</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h1 id="-">自我评价</h1>
-<ol>
-<li>逻辑思维严谨，有较强的学习及适应能力</li>
-<li>做项目认真负责，心理素质和抗压能力强，富有责任心</li>
-<li>具有独立分析和解决问题的能力</li>
+<li>最后项目完成后在Linux系统上进行项目上线部署</li>
 </ol>
 <hr>
-<h1 id="-">致谢</h1>
-<p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p></body>
+<h1 id="自我评价">自我评价</h1>
+<ul>
+<li><p>我对自己的定位</p>
+<ul>
+<li>主攻后端,同时在其他方面打打辅助。全栈才能最高效地解决问题。</li>
+</ul>
+</li>
+<li><p>我对工作的态度</p>
+<ol>
+<li>要高效完成自己的本职工作。</li>
+<li>要在完成的基础上寻找完美。</li>
+<li>要在完美的基础上,与其他同事 互相交流学习,互相提升。</li>
+<li>要在学习的提升中进行技术提炼总结。</li>
+</ol>
+</li>
+<li><p>我怎样克服困难</p>
+<ul>
+<li>不用百度是第一原则,在遇到技术问题时我往往会去Google、Stack over flow上寻找答案。</li>
+<li>相信事实的结果,自己动手去做。在找到答案后并不意味着解决了,所以需要熟练地阅读源码、在手册、规范甚至 REPL的环境自己做实验才是最终解决问题的办法。</li>
+</ul>
+</li>
+<li><p>我的优势</p>
+<ul>
+<li>热爱技术、自学能力强,有良好的自我认知。</li>
+<li>喜欢思考和对未来充满想象和对未知事物充满好奇。</li>
+</ul>
+</li>
+<li><p>我的劣势</p>
+<ul>
+<li>在工作的时候带入了主观的情绪，导致一些判断都不够客观</li>
+</ul>
+</li>
+</ul></body>
 </html>
